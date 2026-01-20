@@ -1,0 +1,94 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .hero {
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1507842217121-9e93ca0a50b0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 5rem 2rem;
+        text-align: center;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+    }
+    .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.25rem; margin-bottom: 2rem; }
+    .btn-cta {
+        background-color: #f1c40f;
+        color: #2c3e50;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: transform 0.2s;
+        display: inline-block;
+    }
+    .btn-cta:hover { transform: scale(1.05); color: #2c3e50; }
+    
+    .book-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+    .book-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: box-shadow 0.3s;
+    }
+    .book-card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    .book-img {
+        height: 300px;
+        background-color: #ecf0f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #7f8c8d;
+    }
+    .book-info { padding: 1.5rem; }
+    .book-title { font-size: 1.2rem; margin: 0 0 0.5rem; font-weight: bold; }
+    .book-price { color: #e74c3c; font-weight: bold; font-size: 1.1rem; }
+</style>
+
+<div class="hero">
+    <h1>The Book Haven</h1>
+    <p>Discover your next great adventure. Extensive collection of rare and popular titles.</p>
+    <a href="/Login" class="btn-cta">Member Login</a>
+</div>
+
+<div class="container">
+    <h2 class="mb-4">Featured Collections</h2>
+    <div class="book-grid">
+        <!-- Book 1 -->
+        <div class="book-card">
+            <div class="book-img">Book Cover Placeholder</div>
+            <div class="book-info">
+                <div class="book-title">The Art of Code</div>
+                <div class="book-price">$49.99</div>
+                <p>Master the craft of software development.</p>
+            </div>
+        </div>
+        <!-- Book 2 -->
+        <div class="book-card">
+            <div class="book-img">Book Cover Placeholder</div>
+            <div class="book-info">
+                <div class="book-title">Digital Fortresses</div>
+                <div class="book-price">$34.50</div>
+                <p>Building secure systems in a modern world.</p>
+            </div>
+        </div>
+        <!-- Book 3 -->
+        <div class="book-card">
+            <div class="book-img">Book Cover Placeholder</div>
+            <div class="book-info">
+                <div class="book-title">Cloud Native Patterns</div>
+                <div class="book-price">$55.00</div>
+                <p>Designing for the future of infrastructure.</p>
+            </div>
+        </div>
+    </div>
+</div>

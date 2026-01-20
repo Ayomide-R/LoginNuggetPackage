@@ -1,0 +1,47 @@
+@page "/Login"
+@model SimpleLogin.Ui.Pages.LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- Note: In an RCL, static assets are served from _content/PackageId/path -->
+    <link rel="stylesheet" href="~/_content/SimpleLogin.Ui/css/login-theme.css" />
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Welcome Back</h2>
+            <p>Please enter your details to sign in.</p>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="error-message">
+                @Model.ErrorMessage
+            </div>
+        }
+
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Input.Username">Username</label>
+                <input asp-for="Input.Username" class="form-control" placeholder="Enter your username" autocomplete="off" />
+                <span asp-validation-for="Input.Username" class="text-danger" style="display:none;"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="Input.Password">Password</label>
+                <input asp-for="Input.Password" class="form-control" type="password" placeholder="••••••••" />
+                <span asp-validation-for="Input.Password" class="text-danger" style="display:none;"></span>
+            </div>
+
+            <button type="submit" class="btn-login">Sign In</button>
+        </form>
+    </div>
+</body>
+</html>

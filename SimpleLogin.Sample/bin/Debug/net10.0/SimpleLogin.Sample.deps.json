@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "SimpleLogin.Sample/1.0.0": {
+        "dependencies": {
+          "SimpleLogin.Ui": "1.0.0"
+        },
+        "runtime": {
+          "SimpleLogin.Sample.dll": {}
+        }
+      },
+      "SimpleLogin.Ui/1.0.0": {
+        "runtime": {
+          "lib/net10.0/SimpleLogin.Ui.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SimpleLogin.Sample/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SimpleLogin.Ui/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zUGI3zRITaZT/9MnHE+ANY9eczVClZYdH7h7BZv2lmeLx3g0xXgpchQteomGGbOLNBXVlKFSD/9AMA6cpozJGg==",
+      "path": "simplelogin.ui/1.0.0",
+      "hashPath": "simplelogin.ui.1.0.0.nupkg.sha512"
+    }
+  }
+}

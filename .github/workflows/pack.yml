@@ -1,0 +1,33 @@
+name: Pack SimpleLogin.Ui
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore dependencies
+      run: dotnet restore SimpleLogin.Ui/SimpleLogin.Ui.csproj
+
+    - name: Build
+      run: dotnet build SimpleLogin.Ui/SimpleLogin.Ui.csproj --configuration Release --no-restore
+
+    - name: Pack
+      run: dotnet pack SimpleLogin.Ui/SimpleLogin.Ui.csproj --configuration Release --no-build --output ./nupkgs
+
+    - name: Upload NuGet Package
+      uses: actions/upload-artifact@v4
+      with:
+        name: SimpleLogin.Ui-Package
+        path: ./nupkgs/*.nupkg
