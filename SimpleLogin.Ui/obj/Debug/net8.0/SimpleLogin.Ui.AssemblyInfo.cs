@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A simple, pluggable Login page for ASP.NET Core apps.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e62814f875b5746a6b3e39abfbb1556f9fb03f5e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7daa3299774e25b11bef8fdb80e42d8ee7bd89b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleLogin.Ui")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleLogin.Ui")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

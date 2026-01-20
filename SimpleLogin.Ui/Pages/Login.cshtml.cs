@@ -42,7 +42,7 @@ namespace SimpleLogin.Ui.Pages
                 return Page();
             }
 
-            var isValid = await _authService.ValidateUserAsync(Input.Username, Input.Password);
+            var isValid = await _authService.ValidateUserAsync(Input.Username!, Input.Password!);
 
             if (isValid)
             {
