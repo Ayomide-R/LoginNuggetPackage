@@ -13,21 +13,22 @@ namespace SimpleLogin.Ui.Pages
         public LoginModel(ISimpleLoginAuth authService)
         {
             _authService = authService;
+            Input = new InputModel();
         }
 
         [BindProperty]
         public InputModel Input { get; set; }
 
-        public string ErrorMessage { get; set; }
+        public string? ErrorMessage { get; set; }
 
         public class InputModel
         {
             [Required]
-            public string Username { get; set; }
+            public string? Username { get; set; }
 
             [Required]
             [DataType(DataType.Password)]
-            public string Password { get; set; }
+            public string? Password { get; set; }
         }
 
         public void OnGet()
